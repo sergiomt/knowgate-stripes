@@ -279,7 +279,7 @@ public abstract class BaseStripesBean implements ActionBean {
 
 	/**
 	 * <p>Concatenate attributes javax.servlet.forward.request_uri and javax.servlet.forward.path_info, then append parameter key=value pairs.</p>
-	 * @return String request_uri + path_info + ? param1=value1 & param1=value1 &hellip;
+	 * @return String request_uri + path_info + ? param1=value1 &amp; param1=value1 &hellip;
 	 */
 	public String getLastUrl() {
 		HttpServletRequest req = getContext().getRequest();
@@ -322,7 +322,7 @@ public abstract class BaseStripesBean implements ActionBean {
 	 * <code>&lt;errors count="1"/&gt;
 	 * &lt;error field=\"field_name"&gt;Error Message&lt;/error&gt;
 	 * &lt;/errors&gt;</code>
-	 * @param errors Collection<SimpleError>
+	 * @param errors Collection&lt;SimpleError&gt;
 	 * @return String
 	 */
 	public String errorsToXML(Collection<SimpleError> errors) {
