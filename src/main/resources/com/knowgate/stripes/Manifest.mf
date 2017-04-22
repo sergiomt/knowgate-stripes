@@ -1,0 +1,8 @@
+Manifest-version: 1.0
+Name: com/knowgate/stripes
+Specification-Title: Stripes Extensions and Wrapper Classes
+Specification-Version: 8.0
+Specification-Vendor: Know Gate
+Implementation-Title: com.knowgate.stripes
+Implementation-Version: 8.0
+Implementation-Vendor: Know Gate
