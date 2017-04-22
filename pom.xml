@@ -7,6 +7,19 @@
   <packaging>jar</packaging>
   <name>knowgate-stripes</name>
   <url>http://maven.apache.org</url>
+  <developers>
+    <developer>
+      <name>Sergio Montoro Ten</name>
+      <email>sergiom@knowgate.com</email>
+      <organization>Know Gate</organization>
+      <organizationUrl>http://www.knowgate.com</organizationUrl>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/sergiomt/knowgate-stripes.git</connection>
+    <developerConnection>scm:git:ssh://github.com/sergiomt/knowgate-stripes.git</developerConnection>
+    <url>https://github.com/sergiomt/knowgate-stripes</url>
+  </scm>
   <build>
     <plugins>
       <plugin>
@@ -55,4 +68,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <organization>
+    <name>KnowGate</name>
+  </organization>
 </project>
