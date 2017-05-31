@@ -31,7 +31,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import net.sourceforge.stripes.action.ActionBean;
 import net.sourceforge.stripes.action.ActionBeanContext;
-import net.sourceforge.stripes.controller.AsyncResponse;
 import net.sourceforge.stripes.controller.FlashScope;
 import net.sourceforge.stripes.validation.SimpleError;
 

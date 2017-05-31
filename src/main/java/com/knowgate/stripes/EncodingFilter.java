@@ -43,7 +43,7 @@ private String encoding;
 private FilterConfig filterConfig;
 
 /**
- * @param FilterConfig Contains "encoding" init parameter with a valid character encoding name. Default is UTF-8.
+ * @param fc FilterConfig Contains "encoding" init parameter with a valid character encoding name. Default is UTF-8.
  * @see javax.servlet.Filter#init(javax.servlet.FilterConfig)
 */
 @Override

@@ -43,12 +43,12 @@ public class CachingFilter implements Filter {
 	private long timeout;
     
     /**
-     * @param FilterConfig Contains "expires" init parameter with timeout in milliseconds
+     * @param fc FilterConfig Contains "expires" init parameter with timeout in milliseconds
      * @see javax.servlet.Filter#init(javax.servlet.FilterConfig)
      */
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
-      String expires = filterConfig.getInitParameter("expires");
+    public void init(FilterConfig fc) throws ServletException {
+      String expires = fc.getInitParameter("expires");
       if (null==expires) {
     	  timeout = ONE_WEEK;
       } else {
