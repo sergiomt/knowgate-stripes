@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
 import java.net.URLDecoder;
-
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Collection;
@@ -219,14 +219,14 @@ public abstract class BaseStripesBean implements ActionBean {
 				for (int c = 0; c < aCookies.length; c++) {
 					if (aCookies[c].getName().equals(cookieName)) {
 						cookieValue = aCookies[c].getValue();
-						if (null != cookieValue)
+						if (null != cookieValue) {
 							cookieValue = URLDecoder.decode(aCookies[c].getValue(), "ISO8859_1");
+						}
 						break;
 					} // fi(aCookies[c]==sName)
 				} // next(c)
 			} // fi
-		} catch (UnsupportedEncodingException neverthrown) {
-		}
+		} catch (UnsupportedEncodingException neverthrown) { }
 		return cookieValue;
 	}
 
@@ -237,7 +237,9 @@ public abstract class BaseStripesBean implements ActionBean {
 	 */
 	public void setCookie(String cookieName, String cookieValue) {
 		HttpServletResponse oRes = getContext().getResponse();
-		oRes.addCookie(new Cookie(cookieName, cookieValue));
+		try {
+			oRes.addCookie(new Cookie(cookieName, URLEncoder.encode(cookieValue, "ISO8859_1")));
+		} catch (UnsupportedEncodingException neverthrown) { }
 	}
 
 	/**
