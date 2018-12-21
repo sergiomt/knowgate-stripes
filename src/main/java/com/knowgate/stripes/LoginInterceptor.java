@@ -199,7 +199,7 @@ public abstract class LoginInterceptor implements Interceptor {
 					  else
 						resolution = resolve(beanClass, autologResult.$2(), baseBean.getLastUrl());
 					} else if (!isAllowed(beanClass)) {
-						String sTkn = baseBean.getCookie(tokenName);
+						String sTkn = baseBean.getSessionToken();
 						if (null==sTkn) {
 							resolution = resolve(beanClass, ERROR_CODE_EXPIRED, baseBean.getLastUrl());
 						} else if (sTkn.length()==0) {

@@ -15,6 +15,7 @@ package com.knowgate.stripes;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map.Entry;
+
 import java.util.AbstractMap.SimpleImmutableEntry;
 
 import net.sourceforge.stripes.action.ForwardResolution;
@@ -39,7 +40,12 @@ public abstract class BaseAjaxBean extends BaseStripesBean {
 	public BaseAjaxBean(String template) {
 		this.template = template;
 	}
-	
+
+	public BaseAjaxBean(String template, String resourceBasepath, String resourceBundleName) {
+		super(resourceBasepath, resourceBundleName);
+		this.template = template;
+	}
+
 	public List<SimpleImmutableEntry<String,String>> getResponseData() {
 		return datavalues;
 	}
@@ -108,7 +114,14 @@ public abstract class BaseAjaxBean extends BaseStripesBean {
 		return m;
 	}
 
-	public Entry<String,String> addDataLine(String sCode, String sText) {
+	public Entry<String,String> addDataLine(String sCode, Object oText) {
+		String sText;
+		if (oText==null)
+			sText = "";
+		else if (oText instanceof String)
+			sText = (String) oText;
+		else
+			sText = oText.toString();
 		SimpleImmutableEntry<String,String> nv = new SimpleImmutableEntry<String,String>(sCode,sText);
 		datavalues.add(nv);
 		return nv;

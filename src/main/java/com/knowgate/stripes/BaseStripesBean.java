@@ -279,6 +279,12 @@ public abstract class BaseStripesBean implements ActionBean {
 	}
 
 	/**
+	 * <p>Get session token</p>
+	 * @return String or <b>null</b> if there is no active session.
+	 */
+	public abstract String getSessionToken();
+
+	/**
 	 * <p>Concatenate attributes javax.servlet.forward.request_uri and javax.servlet.forward.path_info, then append parameter key=value pairs.</p>
 	 * @return String request_uri + path_info + ? param1=value1 &amp; param1=value1 &hellip;
 	 */
