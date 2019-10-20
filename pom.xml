@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.knowgate</groupId>
 	<artifactId>knowgate-stripes</artifactId>
-	<version>9.0</version>
+	<version>9.1.0</version>
 	<packaging>jar</packaging>
 	<name>knowgate-stripes</name>
 	<description>KnowGate wrapper over Stripes Framework. Base beans, caching and encoding filters.</description>
@@ -129,7 +129,7 @@
 		<dependency>
 			<groupId>com.knowgate</groupId>
 			<artifactId>knowgate-base</artifactId>
-			<version>9.0.1</version>
+			<version>9.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>net.sourceforge.stripes</groupId>
